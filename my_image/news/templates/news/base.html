@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'news/css/base.css' %}">
+    {% block css_additional %} {% endblock %}
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'post_list' %}">Home</a>
+    <div class="header_menu">
+        <div class="menu">
+            <div class=""><a href="">о районе</a></div>
+            <div class=""><a href="">жизнь района</a></div>
+            <div class=""><a href="">пресс-служба</a></div>
+            <div class=""><a href="">обращение и прием граждан</a></div>
+            <div class=""><a href="">контакты</a></div>
+        </div>
+    </div>
+    
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

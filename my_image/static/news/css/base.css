@@ -1,0 +1,23 @@
+.header_menu {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.header_menu a {
+    float: left;
+    padding: 12px;
+    color: red;
+    text-decoration: none;
+    font-size: 17px;
+    width: 17%;
+    text-align: center;
+}
+
+.header_menu a:hover {
+    background-color: yellow;
+}
+
+.header a.active {
+    background-color: #4CAF50;
+}

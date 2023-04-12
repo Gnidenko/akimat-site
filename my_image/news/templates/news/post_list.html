@@ -1,0 +1,18 @@
+
+{% extends './base.html' %}
+{% load static %}
+
+
+{% block css_additional %}
+<link rel="stylesheet" type="text/css" href="{% static  'news/css/home.css' %}"> 
+{% endblock %}
+
+{% block content %}
+
+    {% for posts in object_list %}
+        <h1><a href="{% url 'post_detail' slug=posts.slug %}">{{ posts.title }}</a></h1>
+        <img class="post-image" src="{{ posts.cover.url }}" alt="{{ posts.title }}">
+        
+    {% endfor %}
+
+{% endblock %}
